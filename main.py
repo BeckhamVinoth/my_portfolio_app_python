@@ -11,7 +11,10 @@ with col1:
 with col2:
     st.title("Beckham Vinoth")
     content = """
-    Hi, I am Vinoth ! I am a programmer, This is my playground to play with
-    my python projects. Have a nice day, Cheers :)
+    Hi, I'm Vinoth !, A passionate Python developer with a flair for crafting innovative solutions 
+    to real-world problems. With a strong background in computer science and years of hands-on experience,
+    I thrive on turning ideas into tangible software products. My journey in programming began with a curiosity-driven 
+    exploration of Python's versatility and elegance, and since then, I've embarked on numerous projects that 
+    showcase the power and flexibility of this language.
     """
     st.info(content)

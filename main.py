@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas
 
 
 st.set_page_config(layout="wide")
@@ -23,3 +24,21 @@ projects_info_content = """
 Below you can find some of the apps which I built in python. Feel free to contact me !
 """
 st.write(projects_info_content)
+
+col3, empty_col, col4 = st.columns([1.5, 0.5, 1.5])
+
+csv_data = pandas.read_csv('data.csv', sep=";")
+
+with col3:
+    for i, row in csv_data[:10].iterrows():
+        st.header(row['title'])
+        st.write(row['description'])
+        st.image("images/" + row['image'])
+        st.write(f"[Source code]({row['url']})")
+
+with col4:
+    for i, row in csv_data[10:].iterrows():
+        st.header(row['title'])
+        st.write(row['description'])
+        st.image("images/" + row['image'])
+        st.write(f"[Source Code]({row['url']})")
